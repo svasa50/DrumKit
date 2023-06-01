@@ -35,10 +35,11 @@ function playDrums(switchCase){
         };
     };
 
+// to create a function to add animation effect
 function addAnimation(currentKey){
-    var activeDrum=document.querySelector("." + currentKey);
+    var activeDrum = document.querySelector("." + currentKey);
     activeDrum.classList.add('pulse');
-    setTimeOut(function(){
+    setTimeout(function(){
         activeDrum.classList.remove('pulse');
     },100);
 };
