@@ -34,7 +34,6 @@ function playDrums(switchCase){
         default: alert("Press only  w a s d j k l  ");
         };
     };
-
 // to create a function to add animation effect
 function addAnimation(currentKey){
     var activeDrum = document.querySelector("." + currentKey);
@@ -42,7 +41,9 @@ function addAnimation(currentKey){
     setTimeout(function(){
         activeDrum.classList.remove('pulse');
     },100);
-};
+}
+
+
 
 
 
