@@ -84,3 +84,7 @@ footer {
   margin: 10px;
   background-color: white;
 }
+.pulse{
+  box-shadow:#404867;
+  opacity: 0.5;
+}
