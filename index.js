@@ -4,12 +4,14 @@ var nOfDrums=document.querySelectorAll(".drum").length;
 for(var i=0; i<nOfDrums; i++)
 {document.querySelectorAll(".drum")[i].addEventListener("click", function(){
     playDrums(this.innerHTML);
+    addAnimation(this.innerHTML);
     })};
 
 //Assigning key press to call playdrums function
 
 document.addEventListener("keypress", function(event){
-    playDrums(event.key)
+    playDrums(event.key);
+    addAnimation(event.key);
     });
 // function to be called to play sounds
 
@@ -32,6 +34,14 @@ function playDrums(switchCase){
         default: alert("Press only  w a s d j k l  ");
         };
     };
+
+function addAnimation(currentKey){
+    var activeDrum=document.querySelector("." + currentKey);
+    activeDrum.classList.add('pulse');
+    setTimeOut(function(){
+        activeDrum.classList.remove('pulse');
+    },100);
+};
 
 
 
